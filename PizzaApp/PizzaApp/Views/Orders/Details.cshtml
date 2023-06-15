@@ -1,0 +1,9 @@
+﻿@model Order
+
+<h2>Order details:</h2>
+<h6>Code: @Model.Code</h6>
+
+@foreach (var pizza in Model.Pizzas)
+{
+	<h6>@pizza.Name</h6>
+}
