@@ -8,7 +8,7 @@ namespace PizzaApp.Models.ViewModels
         public string Name { get; set; }
         public double Price { get; set; }
         public PizzaSizeEnum PizzaSize { get; set; }
-        public bool IsHasExtra { get; set; }
+        public bool HasExtras { get; set; }
        
     }
 }

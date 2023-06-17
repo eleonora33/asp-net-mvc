@@ -8,7 +8,7 @@ namespace PizzaApp.Models.Domain
         public string Name { get; set; }
         public int Price { get; set; }
         public bool IsOnPromotion { get; set; }
-        public bool IsHasExtra { get; set;}
+        public bool HasExtras { get; set;}
         public PizzaSizeEnum PizzaSize { get; set; }
     }
 }

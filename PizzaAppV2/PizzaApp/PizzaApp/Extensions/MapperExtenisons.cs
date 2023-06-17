@@ -13,7 +13,7 @@ namespace PizzaApp.Extensions
                 Name = pizza.Name,
                 Price = pizza.Price,
                 PizzaSize = pizza.PizzaSize,
-                IsHasExtra = pizza.IsHasExtra
+                HasExtras = pizza.HasExtras
             };
         }
     }

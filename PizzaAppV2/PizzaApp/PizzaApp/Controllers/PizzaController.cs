@@ -38,19 +38,19 @@ namespace PizzaApp.Controllers
                 return new EmptyResult();
             }
 
-            if(pizza.IsHasExtra == true)
-            {
-               pizza.Price = pizza.Price + 10;
-            }
-
             PizzaViewModel pizzaViewModel = new PizzaViewModel
             {
                 Id = pizza.Id,
                 Name = pizza.Name,
                 Price = pizza.Price,
                 PizzaSize = pizza.PizzaSize,
-                IsHasExtra = pizza.IsHasExtra
+                HasExtras = pizza.HasExtras
             };
+
+            if(pizzaViewModel.HasExtras)
+            {
+                pizzaViewModel.Price += 10;
+            }
 
             return View(pizzaViewModel);
         }

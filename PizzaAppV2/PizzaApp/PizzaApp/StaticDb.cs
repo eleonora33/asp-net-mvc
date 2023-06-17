@@ -13,7 +13,7 @@ namespace PizzaApp
                 Name = "Capricciosa",
                 Price = 300,
                 IsOnPromotion = true,
-                IsHasExtra = true
+                HasExtras = true
             },
             new Pizza()
             {
@@ -21,7 +21,7 @@ namespace PizzaApp
                 Name = "Pepperoni",
                 Price = 350,
                 IsOnPromotion = false,
-                IsHasExtra = false
+                HasExtras = false
             }
 
         };
