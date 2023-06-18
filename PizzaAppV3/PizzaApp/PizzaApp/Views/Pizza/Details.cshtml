@@ -1,0 +1,12 @@
+﻿@model PizzaViewModel
+
+<partial name="~/Views/Shared/Partials/_PizzaDetailsPartial.cshtml" for="@Model" />
+
+@if(Model.IsOnPromotion)
+{
+	<h4>This pizza is on promotion!</h4>
+}
+else
+{
+	<h4>This pizza is not on promotion :(</h4>
+}
