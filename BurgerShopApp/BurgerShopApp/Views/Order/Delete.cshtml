@@ -1,0 +1,8 @@
+﻿@model OrderDetailsViewModel
+
+<h2>Are you sure that you want to delete the following order:</h2>
+
+<partial name="~/Views/Shared/Partials/_OrderDetailsPartial.cshtml" for="@Model" />
+
+<a asp-controller="Order" asp-action="ConfirmDelete" asp-route-id="@Model.Id" class="btn btn-dark">Confirm</a>
+<a asp-controller="Order" asp-action="GetAllOrders" class="btn btn-dark">Cancel</a>

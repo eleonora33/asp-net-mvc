@@ -1,0 +1,20 @@
+﻿@model List<Burger>
+
+<h2>Burger shop menu: </h2>
+
+<ul>
+    @for (int i = 0; i < @Model.Count; i++)
+    {
+        <li>@Model.ElementAt(i).Name - @Model.ElementAt(i).Price</li>
+
+       if(Model.ElementAt(i).IsVegan){
+
+            <li>Burger is for vegan</li>
+        }
+        else
+        {
+            <li>is not for vegan</li>
+        }
+    }
+
+</ul>

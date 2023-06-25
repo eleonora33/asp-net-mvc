@@ -1,0 +1,19 @@
+﻿@model List<OrderListViewModel>
+
+<a asp-controller="Order" asp-action="CreateOrder" class="btn btn-default">Add order</a>
+
+<h2>All orders:</h2>
+
+<table border="1">
+    <tr><td>User</td><td>Burger</td></tr>
+    @foreach (OrderListViewModel order in @Model)
+    {
+        <tr>
+            <td>@order.FullName</td> &nbsp;
+            <td>@order.BurgerName</td>
+            <td><a asp-controller="Order" asp-action="Details" asp-route-id="@order.Id">Details</a></td>
+            <td><a asp-controller="Order" asp-action="EditOrder" asp-route-id="@order.Id">Edit</a></td>
+            <td><a asp-controller="Order" asp-action="Delete" asp-route-id="@order.Id">Delete</a></td>
+        </tr>
+    }
+</table>

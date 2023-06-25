@@ -1,0 +1,30 @@
+﻿@model OrderViewModel
+<h2>Create Order</h2>
+
+<div class="row">
+	<div class="col-sm-4">
+		<form asp-action="CreateOrderPost" method="post">
+			<div class="form-group">
+				<label asp-for="FullName" class="control-label"> </label>
+				<input type="text" asp-for="FullName" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label asp-for="BurgerName" class="control-label"> </label>
+				<input type="text" asp-for="BurgerName" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label asp-for="Address" class="control-label"> </label>
+				<input type="text" asp-for="Address" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label asp-for="Location" class="control-label"> </label>
+				<input type="text" asp-for="Location" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label asp-for="IsDelivered" class="control-label"> </label>
+				<input type="checkbox" asp-for="IsDelivered" />
+			</div>
+			<button type="submit" class="btn btn-default">Save</button>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model BurgerDialogViewModel
+
+<h2>Edit burger</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditOrder" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="BurgerName" class="control-label"></label>
+                <input asp-for="BurgerName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="IsVegan" class="control-label"></label>
+                <input asp-for="IsVegan" type="checkbox" />
+            </div>
+            <div class="form-group">
+                <label asp-for="IsVegetarian" class="control-label"></label>
+                <input asp-for="IsVegetarian" type="checkbox" />
+            </div>
+            <div class="form-group">
+                <label asp-for="HasFries" class="control-label"></label>
+                <input asp-for="HasFries" type="checkbox" />
+            </div>
+            <br>
+            <button type="submit" class="btn btn-outline-primary">Save</button>
+        </form>
+    </div>
+</div>
