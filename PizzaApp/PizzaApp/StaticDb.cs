@@ -1,5 +1,4 @@
-﻿
-using PizzaApp.Models;
+﻿using PizzaApp.Models.Domain;
 
 namespace PizzaApp
 {
@@ -12,16 +11,25 @@ namespace PizzaApp
                 Id = 1,
                 Name = "Capricciosa",
                 Price = 300,
-                IsOnPromotion = true
+                IsOnPromotion = true,
+                IsHasExtras = true,
             },
             new Pizza()
             {
                 Id = 2,
                 Name = "Pepperoni",
                 Price = 350,
-                IsOnPromotion = false
+                IsOnPromotion = false,
+                IsHasExtras = false,
+            },
+            new Pizza()
+            {
+                Id = 2,
+                Name = "Pepperoni",
+                Price = 200.5,
+                IsOnPromotion = false,
+                IsHasExtras = false,
             }
-
         };
 
         public static List<Order> Orders = new List<Order>
@@ -53,6 +61,25 @@ namespace PizzaApp
                     Pizzas[0],
                     Pizzas[1]
                 },
+            }
+        };
+        public static List<User> Users = new List<User>
+        {
+            new User()
+            {
+                Id = 1,
+                FirstName = "Eleonora",
+                LastName = "Todorovska",
+                PhoneNumber = "1234567890",
+                Address = "Ezerci 4b"
+            },
+            new User()
+            {
+                Id = 2,
+                FirstName = "Toso",
+                LastName = "Malerot",
+                PhoneNumber = "1234567891",
+                Address = "Stopanski dvor 10 a"
             }
         };
     }

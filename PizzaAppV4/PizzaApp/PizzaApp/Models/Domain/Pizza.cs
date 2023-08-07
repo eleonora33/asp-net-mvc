@@ -1,4 +1,4 @@
-﻿namespace PizzaApp.Models
+﻿namespace PizzaApp.Models.Domain
 {
     public class Pizza
     {

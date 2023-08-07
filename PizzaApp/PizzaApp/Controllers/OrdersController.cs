@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PizzaApp.Models;
+using PizzaApp.Models.Domain;
 
 namespace PizzaApp.Controllers
 {

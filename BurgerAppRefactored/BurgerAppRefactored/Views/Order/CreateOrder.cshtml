@@ -1,0 +1,34 @@
+﻿@model OrderDialogViewModel
+
+@{
+    ViewBag.Title = "Create Orders";
+}
+
+<h2>Create Order</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.IsDelivered)
+        @Html.CheckBoxFor(m => m.IsDelivered)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Location)
+        @Html.TextBoxFor(m => m.Location, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.FullName)
+        @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create Order" class="btn btn-primary" />
+    </div>
+}

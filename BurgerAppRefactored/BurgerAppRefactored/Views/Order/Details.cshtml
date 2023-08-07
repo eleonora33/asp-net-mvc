@@ -1,0 +1,31 @@
+﻿@model OrderDetailsViewModel
+
+<div class="text-center">
+    <h2 class="display-4">Order Details</h2>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">
+            User: @Model.FullName
+        </h5>
+        <p class="card-text">
+            @Model.Price MKD
+        </p>
+        <div class="row">
+            <div>Pizzas:</div>
+            @foreach (var burger in Model.BurgerNames)
+            {
+                <div class="card" style="width: 18rem; margin-left: 15px;">
+                    <div class="card-body">
+                        <h3 class="text-center">@burger</h3>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Order" asp-action="Index">Back to orders</a>
+</div>
